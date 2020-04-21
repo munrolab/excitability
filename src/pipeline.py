@@ -165,7 +165,7 @@ def run(temp):
     img,y,ys,ybc = movavg_bc(pjoin(pathlst['rawtif'],phenotype,ID),channel='G')
     IMG,IMGSM,IMGD = diff(img,6,9)
     print('diff',end=' ')
-    imr = img.copy()
+    imr = np.full(img.shape,1,dtype=img.dtype)
     if not LabelR=='None':
         imr,y,ys,ybc = movavg_bc(pjoin(pathlst['rawtif'],phenotype,ID),channel='R',dt=2.4,gauss=3)#
     
@@ -215,6 +215,3 @@ def run(temp):
     np.save(pjoin(pathlst['data'],phenotype+'-'+ID+'_ws'), ws)
     print('')
     return ws
-
-
-
