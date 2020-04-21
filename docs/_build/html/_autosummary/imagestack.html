@@ -1,0 +1,304 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>imagestack &mdash; Blobs 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="lib.image" href="lib.image.html" />
+    <link rel="prev" title="spread" href="spread.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Blobs
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../page.html">Example Page</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../modules.html">Project Modules</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pipeline.html">pipeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utils.html">utils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot.html">plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spread.html">spread</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">imagestack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lib.image.html">lib.image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lib.hdf5.html">lib.hdf5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lib.read_roi.html">lib.read_roi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="foo.html">foo</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Blobs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../modules.html">Project Modules</a> &raquo;</li>
+        
+      <li>imagestack</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/_autosummary/imagestack.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-imagestack">
+<span id="imagestack"></span><h1>imagestack<a class="headerlink" href="#module-imagestack" title="Permalink to this headline">¶</a></h1>
+<p>imagestack</p>
+<p class="rubric">Functions</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#imagestack.bleach_correction" title="imagestack.bleach_correction"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bleach_correction</span></code></a>(im, ixy, window_length, …)</p></td>
+<td><p>measure mean intensity as a function of time, smooth bleach curve, compensate for loss</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#imagestack.cum" title="imagestack.cum"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cum</span></code></a>(mask, N)</p></td>
+<td><p>given binary imagestack, calculate union of images in the past N frames</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#imagestack.moving_avg" title="imagestack.moving_avg"><code class="xref py py-obj docutils literal notranslate"><span class="pre">moving_avg</span></code></a>(im, N)</p></td>
+<td><p>centered moving average out[i] = mean(in[i-N:i+N+1])</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#imagestack.new_excitation" title="imagestack.new_excitation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">new_excitation</span></code></a>(mask, N)</p></td>
+<td><p>given binary imagestack, calculate difference of images N frames apart</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#imagestack.smooth_binary" title="imagestack.smooth_binary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">smooth_binary</span></code></a>(y, NMIN)</p></td>
+<td><p>remove short binary segments from timeseries</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="function">
+<dt id="imagestack.new_excitation">
+<code class="sig-prename descclassname">imagestack.</code><code class="sig-name descname">new_excitation</code><span class="sig-paren">(</span><em class="sig-param">mask</em>, <em class="sig-param">N</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/imagestack.html#new_excitation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imagestack.new_excitation" title="Permalink to this definition">¶</a></dt>
+<dd><p>given binary imagestack, calculate difference of images N frames apart</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mask</strong> – binary imagestack</p></li>
+<li><p><strong>N</strong> – number of frames</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imagestack.cum">
+<code class="sig-prename descclassname">imagestack.</code><code class="sig-name descname">cum</code><span class="sig-paren">(</span><em class="sig-param">mask</em>, <em class="sig-param">N</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/imagestack.html#cum"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imagestack.cum" title="Permalink to this definition">¶</a></dt>
+<dd><p>given binary imagestack, calculate union of images in the past N frames</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mask</strong> – binary imagestack</p></li>
+<li><p><strong>N</strong> – number of frames</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imagestack.moving_avg">
+<code class="sig-prename descclassname">imagestack.</code><code class="sig-name descname">moving_avg</code><span class="sig-paren">(</span><em class="sig-param">im</em>, <em class="sig-param">N</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/imagestack.html#moving_avg"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imagestack.moving_avg" title="Permalink to this definition">¶</a></dt>
+<dd><p>centered moving average
+out[i] = mean(in[i-N:i+N+1])</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="imagestack.bleach_correction">
+<code class="sig-prename descclassname">imagestack.</code><code class="sig-name descname">bleach_correction</code><span class="sig-paren">(</span><em class="sig-param">im</em>, <em class="sig-param">ixy</em>, <em class="sig-param">window_length</em>, <em class="sig-param">videozmin</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/imagestack.html#bleach_correction"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imagestack.bleach_correction" title="Permalink to this definition">¶</a></dt>
+<dd><p>measure mean intensity as a function of time, smooth bleach curve, compensate for loss</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>mean intensity over time raw, smoothed, corrected ; corrected imagestack</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>np.array((N frames,),<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)">float</a>), np.array((Z,X,Y),<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)">float</a>)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imagestack.smooth_binary">
+<code class="sig-prename descclassname">imagestack.</code><code class="sig-name descname">smooth_binary</code><span class="sig-paren">(</span><em class="sig-param">y</em>, <em class="sig-param">NMIN</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/imagestack.html#smooth_binary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imagestack.smooth_binary" title="Permalink to this definition">¶</a></dt>
+<dd><p>remove short binary segments from timeseries</p>
+<p>This is a simple example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">utils</span> <span class="kn">import</span> <span class="n">binary_segments</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="lib.image.html" class="btn btn-neutral float-right" title="lib.image" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="spread.html" class="btn btn-neutral float-left" title="spread" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Baixue Yao
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

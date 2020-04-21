@@ -1,22 +1,15 @@
-.. sphinxcontrib-matlabdomain documentation master file, created by
-   sphinx-quickstart on Tue Jul 17 11:53:15 2018.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+Welcome to Blobs documentation!
+=================================================
 
+python packages for segmenting and tracking blobs in time-lapse video
 
-***************************
-Title
-***************************
+Contents:
 
-Your content here.
+.. toctree::
+   :maxdepth: 2
 
-
-
-.. autosummary::
-   :toctree: _autosummary
-
-   foo
-   package.foo
+   page
+   modules
 
 
 Indices and tables

@@ -1,0 +1,361 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>plot &mdash; Blobs 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="spread" href="spread.html" />
+    <link rel="prev" title="utils" href="utils.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Blobs
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../page.html">Example Page</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../modules.html">Project Modules</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pipeline.html">pipeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utils.html">utils</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spread.html">spread</a></li>
+<li class="toctree-l2"><a class="reference internal" href="imagestack.html">imagestack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lib.image.html">lib.image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lib.hdf5.html">lib.hdf5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lib.read_roi.html">lib.read_roi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="foo.html">foo</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Blobs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../modules.html">Project Modules</a> &raquo;</li>
+        
+      <li>plot</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/_autosummary/plot.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-plot">
+<span id="plot"></span><h1>plot<a class="headerlink" href="#module-plot" title="Permalink to this headline">¶</a></h1>
+<p>visualization</p>
+<p class="rubric">Functions</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#plot.centroid" title="plot.centroid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">centroid</span></code></a>(cnt)</p></td>
+<td><p>find centroid of opencv contour :return: tuple(cX,cY)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#plot.color_excitation" title="plot.color_excitation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">color_excitation</span></code></a>(traj, c, im, exc, newexc)</p></td>
+<td><p>color code different connected excitations</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#plot.colormap" title="plot.colormap"><code class="xref py py-obj docutils literal notranslate"><span class="pre">colormap</span></code></a>(v, vmin, vmax[, cmap])</p></td>
+<td><p>convert number to rgb value using given colormap</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#plot.crop_border" title="plot.crop_border"><code class="xref py py-obj docutils literal notranslate"><span class="pre">crop_border</span></code></a>(imstack, rect, value[, top, …])</p></td>
+<td><p>crop and add border to imagestack</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#plot.draw_circles" title="plot.draw_circles"><code class="xref py py-obj docutils literal notranslate"><span class="pre">draw_circles</span></code></a>(imstack, point, color, N, rlst)</p></td>
+<td><p>draw circle perimeter on RGB image stack</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#plot.hSV" title="plot.hSV"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hSV</span></code></a>(rgb[, channel, v])</p></td>
+<td><p>given rgb value, change its saturation and value in hsv mode</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#plot.mean_CI" title="plot.mean_CI"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mean_CI</span></code></a>(data[, minsample])</p></td>
+<td><p>mean and CI of many time series</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#plot.scalebar_timestamp" title="plot.scalebar_timestamp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scalebar_timestamp</span></code></a>(im, dt, fgc)</p></td>
+<td><p>add space scale bar and time stamp on imagestack</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="function">
+<dt id="plot.mean_CI">
+<code class="sig-prename descclassname">plot.</code><code class="sig-name descname">mean_CI</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">minsample=2</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/plot.html#mean_CI"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#plot.mean_CI" title="Permalink to this definition">¶</a></dt>
+<dd><p>mean and CI of many time series</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> – 2D array. each row is one timeseries. each column is measurements of mutiple samples at the same time point</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>1d array of mean and CI</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="plot.centroid">
+<code class="sig-prename descclassname">plot.</code><code class="sig-name descname">centroid</code><span class="sig-paren">(</span><em class="sig-param">cnt</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/plot.html#centroid"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#plot.centroid" title="Permalink to this definition">¶</a></dt>
+<dd><p>find centroid of opencv contour
+:return: tuple(cX,cY)</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="plot.colormap">
+<code class="sig-prename descclassname">plot.</code><code class="sig-name descname">colormap</code><span class="sig-paren">(</span><em class="sig-param">v</em>, <em class="sig-param">vmin</em>, <em class="sig-param">vmax</em>, <em class="sig-param">cmap='jet'</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/plot.html#colormap"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#plot.colormap" title="Permalink to this definition">¶</a></dt>
+<dd><p>convert number to rgb value using given colormap</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>v</strong> (<em>number</em><em> or </em><em>numpy array</em>) – number to be converted</p></li>
+<li><p><strong>vmin/vmax</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – bounds of colormap</p></li>
+<li><p><strong>cmap</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – colormap name in Matplotlib</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>converted rgb array</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>np.uint8 array</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>to convert 3D(Z,X,Y) array, iterate in Z to convert 2D(X,Y)</p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="plot.crop_border">
+<code class="sig-prename descclassname">plot.</code><code class="sig-name descname">crop_border</code><span class="sig-paren">(</span><em class="sig-param">imstack</em>, <em class="sig-param">rect</em>, <em class="sig-param">value</em>, <em class="sig-param">top=2</em>, <em class="sig-param">bottom=2</em>, <em class="sig-param">left=2</em>, <em class="sig-param">right=2</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/plot.html#crop_border"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#plot.crop_border" title="Permalink to this definition">¶</a></dt>
+<dd><p>crop and add border to imagestack</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>imstack</strong> – np.array (Z,X,Y) or (Z,X,Y,3)</p></li>
+<li><p><strong>rect</strong> – crop rectangle [[z0,z1],[x0,x1],[y0,y1]]</p></li>
+<li><p><strong>value</strong> – int or RGB value to fill the border pixels</p></li>
+<li><p><strong>top</strong><strong>,</strong><strong>bottom</strong><strong>,</strong><strong>left</strong><strong>,</strong><strong>right</strong> – width and height of the border</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="plot.scalebar_timestamp">
+<code class="sig-prename descclassname">plot.</code><code class="sig-name descname">scalebar_timestamp</code><span class="sig-paren">(</span><em class="sig-param">im</em>, <em class="sig-param">dt</em>, <em class="sig-param">fgc</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/plot.html#scalebar_timestamp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#plot.scalebar_timestamp" title="Permalink to this definition">¶</a></dt>
+<dd><p>add space scale bar and time stamp on imagestack</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="plot.color_excitation">
+<code class="sig-prename descclassname">plot.</code><code class="sig-name descname">color_excitation</code><span class="sig-paren">(</span><em class="sig-param">traj</em>, <em class="sig-param">c</em>, <em class="sig-param">im</em>, <em class="sig-param">exc</em>, <em class="sig-param">newexc</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/plot.html#color_excitation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#plot.color_excitation" title="Permalink to this definition">¶</a></dt>
+<dd><p>color code different connected excitations</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>traj</strong> – [(pz0,cnt0),(pz1,cnt1),…]</p></li>
+<li><p><strong>c</strong> – RGB color pair [newexc_color, exc_color]</p></li>
+<li><p><strong>im</strong> – RGB imagestack</p></li>
+<li><p><strong>exc</strong><strong>,</strong><strong>newexc</strong> – binary imagestack</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="plot.draw_circles">
+<code class="sig-prename descclassname">plot.</code><code class="sig-name descname">draw_circles</code><span class="sig-paren">(</span><em class="sig-param">imstack</em>, <em class="sig-param">point</em>, <em class="sig-param">color</em>, <em class="sig-param">N</em>, <em class="sig-param">rlst</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/plot.html#draw_circles"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#plot.draw_circles" title="Permalink to this definition">¶</a></dt>
+<dd><p>draw circle perimeter on RGB image stack</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>imstack</strong> – np.array((Z,X,Y,3), np.uint8)</p></li>
+<li><p><strong>point</strong> – [z,x,y]</p></li>
+<li><p><strong>color</strong> – [R,G,B]</p></li>
+<li><p><strong>N</strong> – draw circle from frame z-N to frame z+N</p></li>
+<li><p><strong>radius</strong> – list of radius of circles</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="plot.hSV">
+<code class="sig-prename descclassname">plot.</code><code class="sig-name descname">hSV</code><span class="sig-paren">(</span><em class="sig-param">rgb</em>, <em class="sig-param">channel=2</em>, <em class="sig-param">v=155</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/plot.html#hSV"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#plot.hSV" title="Permalink to this definition">¶</a></dt>
+<dd><p>given rgb value, change its saturation and value in hsv mode</p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="spread.html" class="btn btn-neutral float-right" title="spread" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="utils.html" class="btn btn-neutral float-left" title="utils" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Baixue Yao
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
